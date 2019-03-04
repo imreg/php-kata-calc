@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-namespace Calculator;
+namespace Calculator\Keyboard;
 
-class Keyboard implements KeyboardInterface
+abstract class AbstractKeyboard implements KeyboardInterface
 {
     /**
      * @var array
@@ -29,8 +29,13 @@ class Keyboard implements KeyboardInterface
     /**
      * @inheritDoc
      */
-    public function keys(): string
+    public function clear()
     {
-        return '0-9.+\-\*\/&\|\^\~\<\>';
+        $this->dataSet = [];
     }
+
+    /**
+     * @inheritDoc
+     */
+    abstract public function keys(): string;
 }
