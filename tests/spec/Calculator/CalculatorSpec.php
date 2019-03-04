@@ -19,7 +19,7 @@ class CalculatorSpec extends ObjectBehavior
         Keyboard $keyboard
     )
     {
-        $keyboard->submit()->willReturn([1,'+illegal',1]);
+        $keyboard->submit()->willReturn([1, '+illegal', 1]);
         $this->beConstructedWith($keyboard);
         $this->result()->shouldReturn(0);
     }
@@ -44,7 +44,7 @@ class CalculatorSpec extends ObjectBehavior
         Keyboard $keyboard
     )
     {
-        $keyboard->submit()->willReturn([1,'+',1.5]);
+        $keyboard->submit()->willReturn([1, '+', 1.5]);
         $this->beConstructedWith($keyboard);
         $this->result()->shouldReturn(2.5);
     }
