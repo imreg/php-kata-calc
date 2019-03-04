@@ -1,0 +1,24 @@
+{
+  "require-dev": {
+    "php": ">=7.1",
+    "phpspec/phpspec": "^4.0",
+    "phpunit/phpunit": ">3.9"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "app/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test-unit": "phpunit",
+    "test-spec": "phpspec run"
+  }
+}
