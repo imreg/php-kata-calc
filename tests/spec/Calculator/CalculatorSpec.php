@@ -20,7 +20,7 @@ class CalculatorSpec extends ObjectBehavior
         $this->result()->shouldReturn(0);
     }
 
-    function it_return_error_if_divison_by_zero_submitted(
+    function it_return_zero_if_division_by_zero_submitted(
         BitwiseKeyboard $keyboard
     )
     {
