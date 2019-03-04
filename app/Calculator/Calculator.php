@@ -26,8 +26,8 @@ final class Calculator
     {
         $dataSet = implode('', $this->keyboard->submit());
 
-        if (preg_match('/^[0-9.+\-\*\/&\|\^\~\<\>]+$/', $dataSet)) {
-            return eval('return ' . $dataSet .';');
+        if (preg_match('/^[' . $this->keyboard->keys() . ']+$/', $dataSet)) {
+            return eval('return ' . $dataSet . ';');
         }
 
         return 0;

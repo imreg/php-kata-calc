@@ -11,7 +11,7 @@ class Keyboard implements KeyboardInterface
     private $dataSet = [];
 
     /**
-     * @param $value
+     * @inheritDoc
      */
     public function add($value)
     {
@@ -19,10 +19,18 @@ class Keyboard implements KeyboardInterface
     }
 
     /**
-     * @return array
+     * @inheritDoc
      */
     public function submit(): array
     {
         return $this->dataSet;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function keys(): string
+    {
+        return '0-9.+\-\*\/&\|\^\~\<\>';
     }
 }

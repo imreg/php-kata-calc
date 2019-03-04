@@ -15,4 +15,9 @@ interface KeyboardInterface
      * @return array
      */
     public function submit(): array;
+
+    /**
+     * @return string
+     */
+    public function keys(): string;
 }
