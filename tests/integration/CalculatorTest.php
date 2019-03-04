@@ -85,6 +85,17 @@ class CalculatorTest extends TestCase
         $this->assertEquals(0, $calculator->result());
     }
 
+    function testZero_Has_Resulted_When_By_Zero_Divison()
+    {
+        $this->keyboard->add(1);
+        $this->keyboard->add('/');
+        $this->keyboard->add(0);
+
+        $calculator = new Calculator($this->keyboard);
+
+        $this->assertEquals(0, $calculator->result());
+    }
+
     function testThirtyTwo_Has_Resulted()
     {
         $this->keyboard->add(1);

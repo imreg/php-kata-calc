@@ -20,6 +20,14 @@ class CalculatorSpec extends ObjectBehavior
         $this->result()->shouldReturn(0);
     }
 
+    function it_return_error_if_divison_by_zero_submitted(
+        BitwiseKeyboard $keyboard
+    )
+    {
+        $keyboard->submit()->willReturn([1, '/', 0]);
+        $this->result()->shouldReturn(0);
+    }
+
     function it_return_zero_if_illegal_character_was_submitted(
         BitwiseKeyboard $keyboard
     )
