@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace Calculator\Keyboard;
+namespace Calculator\Interfaces;
 
 interface KeyboardInterface
 {
