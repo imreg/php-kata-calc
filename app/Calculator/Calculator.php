@@ -22,7 +22,7 @@ final class Calculator
     /**
      * @return int|float
      */
-    public function score()
+    public function result()
     {
         $dataSet = implode('', $this->keyboard->submit());
 

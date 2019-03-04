@@ -9,26 +9,26 @@ use PHPUnit\Framework\TestCase;
 
 class CalculatorTest extends TestCase
 {
-    function testZero_Has_Scored()
+    function testZero_Has_Resulted()
     {
         $keyboard = new Keyboard();
 
         $calculator = new Calculator($keyboard);
 
-        $this->assertEquals(0, $calculator->score());
+        $this->assertEquals(0, $calculator->result());
     }
 
-    function testOne_Has_Scored()
+    function testOne_Has_Resulted()
     {
         $keyboard = new Keyboard();
         $keyboard->add(1);
 
         $calculator = new Calculator($keyboard);
 
-        $this->assertEquals(1, $calculator->score());
+        $this->assertEquals(1, $calculator->result());
     }
 
-    function testTwo_Has_Scored()
+    function testTwo_Has_Resulted()
     {
         $keyboard = new Keyboard();
         $keyboard->add(1);
@@ -37,10 +37,10 @@ class CalculatorTest extends TestCase
 
         $calculator = new Calculator($keyboard);
 
-        $this->assertEquals(2, $calculator->score());
+        $this->assertEquals(2, $calculator->result());
     }
 
-    function testTwoDotFive_Has_Scored()
+    function testTwoDotFive_Has_Resulted()
     {
         $keyboard = new Keyboard();
         $keyboard->add(1);
@@ -49,10 +49,10 @@ class CalculatorTest extends TestCase
 
         $calculator = new Calculator($keyboard);
 
-        $this->assertEquals(2.5, $calculator->score());
+        $this->assertEquals(2.5, $calculator->result());
     }
 
-    function testFifteenDotFive_Has_Scored()
+    function testFifteenDotFive_Has_Resulted()
     {
         $keyboard = new Keyboard();
         $keyboard->add(3);
@@ -65,10 +65,10 @@ class CalculatorTest extends TestCase
 
         $calculator = new Calculator($keyboard);
 
-        $this->assertEquals(15.5, $calculator->score());
+        $this->assertEquals(15.5, $calculator->result());
     }
 
-    function testZero_Has_Scored1()
+    function testZeroBitwise_Has_Resulted()
     {
         $keyboard = new Keyboard();
         $keyboard->add(2);
@@ -77,10 +77,10 @@ class CalculatorTest extends TestCase
 
         $calculator = new Calculator($keyboard);
 
-        $this->assertEquals(0, $calculator->score());
+        $this->assertEquals(0, $calculator->result());
     }
 
-    function testThirtyTwo_Has_Scored1()
+    function testThirtyTwo_Has_Resulted()
     {
         $keyboard = new Keyboard();
         $keyboard->add(1);
@@ -89,6 +89,6 @@ class CalculatorTest extends TestCase
 
         $calculator = new Calculator($keyboard);
 
-        $this->assertEquals(32, $calculator->score());
+        $this->assertEquals(32, $calculator->result());
     }
 }
