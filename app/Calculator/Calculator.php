@@ -10,6 +10,10 @@ final class Calculator
      */
     private $keyboard;
 
+    /**
+     * Calculator constructor.
+     * @param KeyboardInterface $keyboard
+     */
     public function __construct(KeyboardInterface $keyboard)
     {
         $this->keyboard = $keyboard;
