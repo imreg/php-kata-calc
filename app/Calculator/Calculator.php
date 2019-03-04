@@ -3,7 +3,8 @@ declare(strict_types = 1);
 
 namespace Calculator;
 
-use Calculator\Keyboard\KeyboardInterface;
+use Calculator\Interfaces\FormatterInterface;
+use Calculator\Interfaces\KeyboardInterface;
 
 final class Calculator
 {
@@ -13,20 +14,27 @@ final class Calculator
     private $keyboard;
 
     /**
+     * @var FormatterInterface
+     */
+    private $formatter;
+
+    /**
      * Calculator constructor.
      * @param KeyboardInterface $keyboard
+     * @param FormatterInterface $formatter
      */
-    public function __construct(KeyboardInterface $keyboard)
+    public function __construct(KeyboardInterface $keyboard, FormatterInterface $formatter)
     {
         $this->keyboard = $keyboard;
+        $this->formatter = $formatter;
     }
 
     /**
      * @return int|float
      */
-    public function result()
+    public function display()
     {
-        $dataSet = implode('', $this->keyboard->submit());
+        $dataSet = $this->formatter->format($this->keyboard);
 
         if (preg_match('/^[' . $this->keyboard->keys() . ']+$/', $dataSet)) {
             try {

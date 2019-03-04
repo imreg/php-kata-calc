@@ -3,6 +3,8 @@ declare(strict_types = 1);
 
 namespace Calculator\Keyboard;
 
+use Calculator\Interfaces\KeyboardInterface;
+
 abstract class AbstractKeyboard implements KeyboardInterface
 {
     /**
