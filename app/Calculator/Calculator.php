@@ -3,6 +3,8 @@ declare(strict_types = 1);
 
 namespace Calculator;
 
+use Calculator\Keyboard\KeyboardInterface;
+
 final class Calculator
 {
     /**
