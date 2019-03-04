@@ -18,6 +18,7 @@
     }
   },
   "scripts": {
+	"test": "phpspec run; phpunit",
     "test-unit": "phpunit",
     "test-spec": "phpspec run"
   }
